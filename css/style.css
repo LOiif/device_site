@@ -130,27 +130,24 @@ ul{
     line-height: 24px;
 }
 
-.text {
+.text{
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     color: #464646;
 }
 
+.text_color_white{
+    color: white;
+}
+
 .text_size_m {
     font-size: 15px;
     line-height: 30px;
-    letter-spacing: 0.15px;
-
-}
-
-.text_size_l {
-
 }
 
 .text_size_s {
     font-size: 13px;
     line-height: 20px;
-    letter-spacing: 0.13px;
 }
 
 
@@ -160,6 +157,10 @@ ul{
     font-weight: 400;
     line-height: 48px;
     text-transform: uppercase;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 .logo:hover{
@@ -338,21 +339,21 @@ ul{
     height: 12px;
 }
 
-.user-nav-link:hover{
+.header__user-nav-link:hover{
     opacity: 0.6;
 }
 
-.user-nav-link:hover::before{
+.header__user-nav-link:hover::before{
     opacity: 0.6;
     transition: 0.2s ease-in-out;
 }
 
-.user-nav-link:active::before{
+.header__user-nav-link:active::before{
     opacity: 0.3;
     transition: 0.2s ease-in-out;
 }
 
-.user-nav-link:active{
+.header__user-nav-link:active{
     opacity: 0.3;
 }
 
@@ -568,7 +569,7 @@ ul{
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin-top:  -14px;
+    margin-top: -14px;
 }
 
 .categories-card{
@@ -669,19 +670,31 @@ ul{
     width: 100%;
     background-color: #e5e5e5;
     padding-bottom: 101px;
+    margin-bottom: 94px;
 
 }
 
 .services-content{
+    position: relative;
     display: flex;
-
     width: 1000px;
-
     margin: auto ;
-
     padding-right: 160px;
-
 }
+
+.services-content::after{
+    content: "";
+    position: absolute;
+
+    top: -15px;
+    right: 66px;
+
+    width: 136px;
+    height: 164px;
+
+    background-image: url("../img/delivery.png");
+}
+
 
 .services-buttons-list{
     min-width: 278px;
@@ -756,7 +769,304 @@ ul{
 .services__text{
     margin: 0;
 }
+.manufactures{
+    width: 1157px;
+
+    margin: auto;
+    margin-bottom: 102px;
+}
+
+.manufactures-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0;
+}
+
+.logo-link{
+    display: block;
+
+    opacity: 0.2;
+
+    width: 260px;
+    height: 100px;
+}
+
+.manufactures__logo-link-01{
+    background-image: url("../img/logo-01.jpg");
+}
+.manufactures__logo-link-02{
+    background-image: url("../img/logo-02.jpg");
+}
+.manufactures__logo-link-03{
+    background-image: url("../img/logo-03.jpg");
+}
+.manufactures__logo-link-04{
+    background-image: url("../img/logo-04.jpg");
+}
+
+.logo-link:hover{
+    opacity: 1;
+}
+
+.about-and-contacts{
+    width: 1160px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: auto;
+    margin-bottom: 82px;
+
+}
+
+.about{
+    position: relative;
+}
+
+.contacts{
+    position: relative;
+}
 
 
+.about__text:first-of-type{
+    margin-bottom: 31px;
+}
+
+.transport-company-list{
+    padding: 0;
+    margin-top: 65px;
+    margin-bottom: 54px;
+}
+
+.transport-company-item{
+    position: relative;
+
+    padding-left: 36px;
+
+    font-family: "Gilroy Extra Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.transport-company-item::before{
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 2px;
+
+    margin-top: -4px;
+
+    width: 4px;
+    height: 4px;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+}
+
+.about-and-contacts__button{
+    display: inline-block;
+     width: 260px;
+}
+
+.about-and-contacts__button:hover{
+    box-shadow: none;
+}
+
+.about-and-contacts__button:active{
+    color: rgba(0, 0, 0, 0.3);
+    box-shadow: none;
+}
+.map{
+    width: 560px;
+    height: 222px;
+
+    margin-top: 39px;
+    margin-bottom: 69px;
+    background-image: url("../img/map.jpg");
+}
+
+.about-and-contacts section::before{
+    content: "";
+    position: absolute;
+
+    top: -9px;
+    left: 0;
+
+    width: 80px;
+    height: 7px;
+
+    background-color: black;
+
+}
+
+.footer{
+    background-color: #464646;
+}
+
+.footer-content{
+    display: flex;
+    width: 1164px;
+
+    margin: auto;
+
+    padding-top: 60px;
+    padding-bottom: 64px;
+
+    color: white;
+}
+
+.logo-and-address{
+    position: relative;
+    margin-right: 160px;
+}
 
 
+.logo-and-address::before{
+    content: "";
+    position: absolute;
+
+    bottom: 36px;
+    left: 2px;
+
+    width: 80px;
+    height: 7px;
+
+    background-color: #ffc600;
+}
+
+.footer__logo{
+    color: #ffc600;
+    cursor: pointer;
+}
+
+.footer__logo:hover{
+    opacity: 0.6;
+}
+
+.footer__logo:active{
+    opacity: 0.3;
+}
+
+.footer__address{
+    line-height: 44px;
+}
+
+.nav-and-social-networks{
+    margin-right: auto;
+}
+
+
+.footer__nav-list{
+    min-width: 428px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0;
+    margin-top: 73px;
+    margin-bottom: 61px;
+}
+
+.footer__nav-link:hover{
+    opacity: 0.6;
+}
+.footer__nav-link:active{
+    opacity: 0.3;
+}
+
+.social-networks-list{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-network-item:not(:last-of-type){
+    margin-right: 23px;
+}
+
+.social-network-link svg{
+    width: 32px;
+    height: 32px;
+    transition: 0.2s ease-in-out;
+}
+
+.social-network-link:hover svg{
+    opacity: 0.6;
+}
+.social-network-link:active svg{
+    opacity: 0.1;
+}
+
+.footer__user-nav-list{
+    display: flex;
+    padding: 0;
+    margin-top: 3px;
+    margin-bottom: 37px;
+}
+
+.footer__login-link{
+    margin-right: 64px;
+}
+
+.footer__compare-link{
+    margin-right: 65px;
+}
+.footer__user-nav-link{
+    color: white;
+}
+
+.footer__user-nav-link svg{
+    content: "";
+    position: absolute;
+    top: 50%;
+}
+
+.footer__login-link svg{
+    left: -26px;
+    margin-top: -6px;
+}
+.footer__compare-link svg{
+    left: -20px;
+    margin-top: -4px;
+}
+.footer__bag-link svg{
+    left: -23px;
+    margin-top: -6px;
+}
+
+.footer__user-nav-link:hover{
+    opacity: 0.6;
+}
+
+.footer__user-nav-link:active{
+    opacity: 0.3;
+}
+
+
+.footer__phone{
+    text-align: right;
+}
+
+.html-academy-logo{
+    display: block;
+
+    width: 27px;
+    height: 35px;
+
+    margin-left: auto;
+    margin-top: 63px;
+
+    cursor: pointer;
+}
+
+.html-academy-logo:hover{
+    opacity: 0.6;
+}
+.html-academy-logo:active{
+    opacity: 0.3;
+}
